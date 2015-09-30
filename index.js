@@ -75,6 +75,11 @@ OKCoin.prototype.trade = function(symbol, type, price, amount) {
 	this._send(channel, params);
 }
 
+// Receive the latest OKCoin Spot market data
+OKCoin.prototype.ticker = function () {
+	this._send('ok_btcusd_ticker', {});
+};
+
 OKCoin.prototype.cancelOrder = function(symbol, orderId) {
 	var params = {'symbol': symbol, 'order_id': orderId};
 	var channel = this.site === 'com' ? 'ok_spotusd_cancel_order' : 'ok_spotcny_cancel_order';
