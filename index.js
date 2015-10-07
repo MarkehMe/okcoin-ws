@@ -1,5 +1,5 @@
 var WebSocket = require('ws');
-var md5 = require('MD5');
+var md5 = require('md5');
 
 function OKCoin(site, key, secret, channels) {
 	this.site = site;
