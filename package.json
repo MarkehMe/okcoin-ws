@@ -1,6 +1,6 @@
 {
   "name": "okcoin-ws",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "OKCoin WebSocket API wrapper",
   "main": "index.js",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xkmo/okcoin-ws.git"
+    "url": "https://github.com/faddai/okcoin-ws.git"
   },
   "keywords": [
     "okcoin",
     "btc",
     "bitcoin"
   ],
-  "author": "xkmo",
+  "author": "xkmo, faddai",
   "license": "MIT",
   "dependencies": {
     "MD5": "^1.2.1",

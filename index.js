@@ -1,5 +1,5 @@
 var WebSocket = require('ws');
-var md5 = require('MD5');
+var md5 = require('md5');
 
 function OKCoin(site, key, secret, channels) {
 	this.site = site;
@@ -74,6 +74,11 @@ OKCoin.prototype.trade = function(symbol, type, price, amount) {
 	var channel = this.site === 'com' ? 'ok_spotusd_trade' : 'ok_spotcny_trade';
 	this._send(channel, params);
 }
+
+// Receive the latest OKCoin Spot market data
+OKCoin.prototype.ticker = function () {
+	this._send('ok_btcusd_ticker', {});
+};
 
 OKCoin.prototype.cancelOrder = function(symbol, orderId) {
 	var params = {'symbol': symbol, 'order_id': orderId};
