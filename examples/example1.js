@@ -4,7 +4,7 @@
 
 'use strict';
 
-var OKCoin = require('./index');
+var OKCoin = require('../index');
 
 var ok = new OKCoin('com');
 
